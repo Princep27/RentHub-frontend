@@ -60,6 +60,128 @@
   height: 90vh;
   background-color: rgb(232, 232, 232);
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.filterState{
+  background-color: rgb(174, 174, 208);
+  height: 90%;
+  width: 40%;
+  position: relative;
+}
+
+.filterStateInput{
+  position: absolute;
+  top: 5%;
+  left: 10% ;
+  height: 36px;
+  width: 75%;
+  border-radius: 5px;
+  border: 0px;
+  padding: 4px 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filterStateInput::placeholder{
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+
+
+.filterStateInputSearch{
+  position: absolute;
+  right: calc(15% + 10px);
+  top: calc(5% + 8px);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filterStateDropdown{
+  height: 65%;
+  width: 75%;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  background-color: rgb(239, 239, 239);
+  border-radius: 5px;
+  list-style: none;
+  overflow-y: scroll;
+}
+
+.filterStateDropdownItem{
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+
+/*----------------------- City drop down -----------------------*/
+
+.filterCity{
+  background-color: rgb(75, 75, 81);
+  height: 90%;
+  width: 40%;
+  position: relative;
+}
+
+.filterCityInput{
+  position: absolute;
+  top: 5%;
+  left: 10% ;
+  height: 36px;
+  width: 75%;
+  border-radius: 5px;
+  border: 0px;
+  padding: 4px 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filterCityInput::placeholder{
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+
+
+.filterCityInputSearch{
+  position: absolute;
+  right: calc(15% + 10px);
+  top: calc(5% + 8px);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filterCityDropdown{
+  height: 65%;
+  width: 75%;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  background-color: rgb(239, 239, 239);
+  border-radius: 5px;
+  list-style: none;
+  overflow-y: scroll;
+}
+
+.filterCityDropdownItem{
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.filterCity{
+  background-color: rgb(75, 75, 81);
+  height: 90%;
+  width: 40%;
 }
 
 /*---------- adding media quries -------------------*/
