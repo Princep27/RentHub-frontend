@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, {useContext, useEffect, useState } from 'react';
 import "./home.css";
 import Header from '../../components/header/Header';
 import Products from '../../components/products/Products';
@@ -7,6 +7,8 @@ import {BiFilter} from "react-icons/bi";
 import {ImCross} from "react-icons/im";
 import {FiSearch} from "react-icons/fi";
 import {states,cities} from "../../data.js";
+import { LoginContext } from '../../context/LoginContext';
+import Login from '../login/Login';
 
 export default function Home() {
 
@@ -15,6 +17,7 @@ export default function Home() {
   const [filterCities,setFilterCities] = useState([]);
   const [selectedState,setSelectedState] = useState("");
   const [selectedCity,setSelectedCity] = useState("");
+  const {isLoginFormOpen} = useContext(LoginContext);
 
   function handleFilterButton(){
     setIsOpen(!isOpen);
@@ -40,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-        <div style={{opacity:isOpen?'0.5':'1'}}>
+        <div style={{opacity:isOpen || isLoginFormOpen?'0.5':'1'}}>
           <Header/>
           <div className='homeWrapper'>
             <div className='heading'>
@@ -53,6 +56,8 @@ export default function Home() {
           </div>
         </div>
         
+          {/* login popup */}
+          { isLoginFormOpen && <Login/> }
 
           <div className='filterSideBar' style={isOpen?{visibility:'visible',right:'0vw'}:{visibility:'hidden',right:'-100vw'}}>
              <div className='homeFilterInputFieldWrapper'>

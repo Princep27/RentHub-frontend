@@ -1,0 +1,76 @@
+
+.loginFormWrapper{
+    user-select: none;
+    z-index: 1;
+    position:fixed;
+    top:0px;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:gray;
+}
+.loginFormCross{
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.loginForm{
+    font-size:20px;
+    padding:80px;
+    background-color: rgb(205, 210, 206);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items:stretch;
+}
+.loginInputBar{
+    color:rgba(0, 0, 0, 0.842);
+    background-color: rgb(205, 210, 206);
+    width:300px;
+    outline:none;
+    border:2px solid rgba(128, 128, 128, 0.507);
+    border-style:none none solid;
+    font-size:20px;
+}
+.loginSubmitButton{
+    color:gray;
+    height:40px;
+    font-size:20px;
+}
+
+
+/* media queries */
+@media only screen and (max-width:480px){
+    .loginFormCross{
+        position:fixed;
+        top:20px;
+        right:20px;
+    }
+    .loginForm{
+        width:100vw;
+        height:100vh;
+        align-items: center;
+        position:relative;
+    }
+    .loginForm div{
+        width:75vw;
+    }
+    .loginInputBar{
+        width:75vw;
+    }
+    .loginForm h3{
+        width:75vw;
+    }
+    .loginSubmitButton{
+        width:75vw;
+    }
+}

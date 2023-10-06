@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {RxCross2} from "react-icons/rx";
 
 import "./header.css";
+import { LoginContext } from '../../context/LoginContext';
 
 export default function Header() {
 
@@ -12,6 +13,7 @@ export default function Header() {
     console.log("clicked" + isOpen);
     setIsOpen(!isOpen);
   }
+  const {setIsLoginFormOpen} = useContext(LoginContext);
 
   return (
     <div className='headerWrapper'>
@@ -26,7 +28,7 @@ export default function Header() {
           <CiSearch className='iconSearch' />
         </div>
         <div className='headerRight'>
-          <div className='loginIcon'>
+          <div className='loginIcon' onClick={()=>{setIsLoginFormOpen((x)=>!x)}}>
             <p>Login</p>
           </div>
         </div>
