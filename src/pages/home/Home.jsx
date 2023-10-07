@@ -8,7 +8,7 @@ import {ImCross} from "react-icons/im";
 import {FiSearch} from "react-icons/fi";
 import { LoginContext } from '../../context/LoginContext';
 import Login from '../login/Login';
-import { Country, State, City }  from 'country-state-city';
+import { State, City }  from 'country-state-city';
 
 
 export default function Home() {
