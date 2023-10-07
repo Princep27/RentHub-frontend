@@ -24,13 +24,14 @@
 .loginForm{
     font-size:20px;
     padding:80px;
-    background-color: #6A9C89;
+    background-color: #516b61;
     position:relative;
     display:flex;
     flex-direction:column;
     row-gap: 30px;
     justify-content: center;
     align-items:stretch;
+    color: white;
 }
 .loginInputBar{
     color:rgba(0, 0, 0, 0.842);
