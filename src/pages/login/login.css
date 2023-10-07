@@ -35,7 +35,7 @@
 }
 .loginInputBar{
     color:rgba(0, 0, 0, 0.842);
-    background-color: rgb(205, 210, 206);
+    background-color: white;
     width:300px;
     outline:none;
     border:2px solid rgba(128, 128, 128, 0.507);
