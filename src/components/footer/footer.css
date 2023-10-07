@@ -43,6 +43,9 @@ footer h2{
 .footerLinks ul{
     list-style-type: none;
 }
+.footerLinks li{
+    cursor: pointer;
+}
 
 .copyright{
     width:100%;

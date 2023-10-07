@@ -1,9 +1,11 @@
+import { useContext } from 'react';
 import './footer.css';
 import { AiFillFacebook,AiOutlineInstagram,AiOutlineTwitter,AiFillYoutube,AiFillLinkedin} from "react-icons/ai";
+import { LoginContext } from '../../context/LoginContext';
 export default function Footer(){
-
+    const {setIsLoginFormOpen} = useContext(LoginContext);
     return (
-        <>
+        <>  
             <footer >
                     <div className="footerIconsWrapper">
                         <h2>RentHub</h2>
@@ -20,13 +22,13 @@ export default function Footer(){
                 <div className="footerWrapper">
                     <div className="footerLinks">
                         <h4>Quick Links</h4>
-                    <ul>
-                        <li>Book</li>
-                        <li>Car</li>
-                        <li>Room</li>
-                        <li>Camera</li>
-                        <li>Home Appliances</li>
-                    </ul>
+                        <ul>
+                            <li>Book</li>
+                            <li>Car</li>
+                            <li>Room</li>
+                            <li>Camera</li>
+                            <li>Home Appliances</li>
+                        </ul>
                     </div>
                     <div className="footerVerticalRule" id="footerVerticalRule1"></div>
                     <div className="footerLinks">
@@ -34,9 +36,10 @@ export default function Footer(){
                         <ul>
                             <li>Home</li>
                             <li>Sign Up</li>
-                            <li>Login</li>
+                            <li onClick={()=>{setIsLoginFormOpen((x)=>!x)}}>Login</li>
                         </ul>
                     </div>
+
                     <div className="footerVerticalRule" id='footerVerticalRule2'></div>
                     <div className="footerLinks">
                         <ul>
