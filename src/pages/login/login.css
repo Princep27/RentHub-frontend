@@ -24,7 +24,7 @@
 .loginForm{
     font-size:20px;
     padding:80px;
-    background-color: rgb(205, 210, 206);
+    background-color: #6A9C89;
     position:relative;
     display:flex;
     flex-direction:column;
