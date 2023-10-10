@@ -2,6 +2,9 @@ import React, { useContext, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {RxCross2} from "react-icons/rx";
+import {AiFillCaretLeft,AiFillCaretRight} from "react-icons/ai";
+import { useRef } from 'react';
+
 
 import "./header.css";
 import { LoginContext } from '../../context/LoginContext';
@@ -14,6 +17,7 @@ export default function Header() {
     setIsOpen(!isOpen);
   }
   const {setIsLoginFormOpen} = useContext(LoginContext);
+  const scrollRef = useRef(null);
 
   return (
     <div className='headerWrapper'>
@@ -36,7 +40,16 @@ export default function Header() {
       </div>
 
       <div className='subHeader'>
-          <ul className='optionsSubHeader'>
+          <AiFillCaretLeft onClick={()=>{scrollRef.current.scrollLeft -= 100}}/>
+          <ul className='optionsSubHeader' ref={scrollRef}>
+            <li>Book</li> 
+            <li>Car</li>
+            <li>Bike</li>
+            <li>Tablet</li>
+            <li>Room</li>
+            <li>Camera</li>
+            <li>Mobile</li>
+            <li>Laptop</li>
             <li>Book</li> 
             <li>Car</li>
             <li>Bike</li>
@@ -48,6 +61,7 @@ export default function Header() {
             <li>PC</li>
             <li>HomeAppliances</li>  
           </ul>
+          <AiFillCaretRight onClick={()=>{scrollRef.current.scrollLeft += 100}}/>
       </div>
 
       <div className='sideBar' style={{left:isOpen?'0px':'-220px'}} >

@@ -119,11 +119,12 @@ align-items: center;
 
 .subHeader ul{
     padding-bottom: 6px;
-    width: 80vw;
+    width: 100vw;
     display: flex;
     justify-content: left;
     list-style: none;
-    overflow-x: auto;
+    overflow-x: scroll;
+    color: #515151;
 }
 
 .subHeader ul::-webkit-scrollbar{
@@ -135,6 +136,7 @@ align-items: center;
     font-size: 15px;
     letter-spacing: 2px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .subHeader ul li:hover{
