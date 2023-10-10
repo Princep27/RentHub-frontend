@@ -46,19 +46,19 @@
 }
 
 .filterSideBarCross{
-  font-size: 20px;
-  top:5px;
-  left:5px;
+  font-size: 15px;
+  top :6vh;
+  left:7vw;
   color: rgb(49, 49, 49);
   position:absolute;
   cursor: pointer;
+  z-index: 1;
 }
 
 .homeFilterInputFieldWrapper{
   justify-content: center;
   width: 90vw;
   height: 90vh;
-  background-color: rgb(232, 232, 232);
   position: relative;
   display: flex;
   align-items: center;
@@ -66,9 +66,9 @@
 
 
 .filterState{
-  background-color: rgb(174, 174, 208);
+  background-color: #c6d4c6;
   height: 90%;
-  width: 40%;
+  width: 43%;
   position: relative;
 }
 
@@ -124,9 +124,9 @@
 /*----------------------- City drop down -----------------------*/
 
 .filterCity{
-  background-color: rgb(75, 75, 81);
+  background-color: #c6d6c6;
   height: 90%;
-  width: 40%;
+  width: 43%;
   position: relative;
 }
 
@@ -176,12 +176,6 @@
   font-size: 16px;
   cursor: pointer;
   border: 1px solid white;
-}
-
-.filterCity{
-  background-color: rgb(75, 75, 81);
-  height: 90%;
-  width: 40%;
 }
 
 /*---------- adding media quries -------------------*/
