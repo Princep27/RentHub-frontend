@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-.headerLeft p{
+.title{
     font-size: 24px;
     letter-spacing: 2px;
     cursor: pointer;    
@@ -186,13 +186,13 @@ align-items: center;
 /*--------------media quries ----------------------------*/
 
 @media only screen and (max-width: 1024px){
-    .headerLeft p{
+    .title{
       padding-left: 30px;
     }
 }
 
 @media only screen and (max-width: 1024px){
-    .headerLeft p{
+    .title{
       font-size: 20px;
     }
     .headerMid input{

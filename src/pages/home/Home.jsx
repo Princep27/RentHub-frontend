@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./home.css";
 import Header from '../../components/header/Header';
 import Products from '../../components/products/Products';
@@ -6,12 +6,12 @@ import Footer from '../../components/footer/Footer';
 import {BiFilter} from "react-icons/bi";
 import {ImCross} from "react-icons/im";
 import {FiSearch} from "react-icons/fi";
-import { LoginContext } from '../../context/LoginContext';
-import Login from '../login/Login';
 import { State, City }  from 'country-state-city';
+import { Outlet, useLocation } from 'react-router-dom';
 
 
 export default function Home() {
+  const location = useLocation();
 
   // States and contexts
   const [isOpen,setIsOpen] = useState(false);
@@ -19,7 +19,6 @@ export default function Home() {
   const [filterCities,setFilterCities] = useState([]);
   const [selectedState,setSelectedState] = useState({name:"",selected:false});
   const [selectedCity,setSelectedCity] = useState({name:"",selected:false});
-  const {isLoginFormOpen} = useContext(LoginContext);
 
   // Effetcs
 
@@ -55,7 +54,7 @@ export default function Home() {
 
   return (
     <>
-        <div style={{opacity:isOpen || isLoginFormOpen?'0.5':'1'}}>
+        <div style={{opacity:isOpen || (location.pathname !== "/")?'0.5':'1'}}>
           <Header/>
           <div className='homeWrapper'>
             <div className='heading'>
@@ -69,7 +68,6 @@ export default function Home() {
         </div>
         
           {/* login popup */}
-          { isLoginFormOpen && <Login/> }
 
           <div className='filterSideBar' style={isOpen?{visibility:'visible',right:'0vw'}:{visibility:'hidden',right:'-100vw'}}>
              <div className='homeFilterInputFieldWrapper'>
@@ -110,10 +108,10 @@ export default function Home() {
                     </ul>
                     <FiSearch className='filterCityInputSearch'/>
                 </div>
-
              </div>
           </div>
         <Footer/>
+        <Outlet/>
     </>
   )
 }

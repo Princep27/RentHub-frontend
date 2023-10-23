@@ -1,14 +1,14 @@
-import { useContext } from 'react';
 import './login.css';
 import {RxCross2} from "react-icons/rx";
-import { LoginContext } from '../../context/LoginContext';
+import { Link } from 'react-router-dom';
 export default function Login(){
-    const {setIsLoginFormOpen} = useContext(LoginContext);
     return (
         <>
             <div className="loginFormWrapper">
                 <div className="loginForm">
-                    <RxCross2 className='loginFormCross' onClick={()=>setIsLoginFormOpen((x)=>!x)}/>
+                    <Link to="/" style={{textDecoration:'none'}}>
+                    <RxCross2 className='loginFormCross'/>
+                    </Link>
 
                     <h3>ACCOUNT LOGIN</h3>
 

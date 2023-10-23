@@ -1,9 +1,6 @@
-import { useContext } from 'react';
 import './footer.css';
 import { AiFillFacebook,AiOutlineInstagram,AiOutlineTwitter,AiFillYoutube,AiFillLinkedin} from "react-icons/ai";
-import { LoginContext } from '../../context/LoginContext';
 export default function Footer(){
-    const {setIsLoginFormOpen} = useContext(LoginContext);
     return (
         <>  
             <footer >
@@ -36,7 +33,7 @@ export default function Footer(){
                         <ul>
                             <li>Home</li>
                             <li>Sign Up</li>
-                            <li onClick={()=>{setIsLoginFormOpen((x)=>!x)}}>Login</li>
+                            <li>Login</li>
                         </ul>
                     </div>
 

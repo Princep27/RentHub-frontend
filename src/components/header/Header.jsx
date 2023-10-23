@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {RxCross2} from "react-icons/rx";
@@ -16,7 +16,6 @@ export default function Header() {
     console.log("clicked" + isOpen);
     setIsOpen(!isOpen);
   }
-  const {setIsLoginFormOpen} = useContext(LoginContext);
   const scrollRef = useRef(null);
 
   return (
@@ -24,7 +23,9 @@ export default function Header() {
       <div className='header'>
         <div className='headerLeft'>
           <GiHamburgerMenu className='headerHamburger' onClick={handleClick}/>
-          <p>RentHub</p>    
+          <div className="title">
+          RentHub    
+          </div>
         </div>
         <div className='headerMid'>
           <input className='headerSearch' placeholder='Search Product' type="text">
@@ -32,8 +33,8 @@ export default function Header() {
           <CiSearch className='iconSearch' />
         </div>
         <div className='headerRight'>
-          <div className='loginIcon' onClick={()=>{setIsLoginFormOpen((x)=>!x)}}>
-            <p>Login</p>
+          <div className='loginIcon' >
+            Login
           </div>
         </div>
 
@@ -41,7 +42,7 @@ export default function Header() {
 
       <div className='subHeader'>
           <AiFillCaretLeft onClick={()=>{scrollRef.current.scrollLeft -= 100}}/>
-          <ul className='optionsSubHeader' ref={scrollRef}>
+          <ul className='optionsSubHeader my-auto ' ref={scrollRef}>
             <li>Book</li> 
             <li>Car</li>
             <li>Bike</li>
