@@ -7,7 +7,7 @@ import { useRef } from 'react';
 
 
 import "./header.css";
-import { LoginContext } from '../../context/LoginContext';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 
@@ -33,9 +33,9 @@ export default function Header() {
           <CiSearch className='iconSearch' />
         </div>
         <div className='headerRight'>
-          <div className='loginIcon' >
+          <Link to="/login" className='loginIcon' style={{textDecoration:'none',color:'black'}}>
             Login
-          </div>
+          </Link>
         </div>
 
       </div>
