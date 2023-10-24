@@ -8,7 +8,6 @@ import { Form, FormControl, Stack } from 'react-bootstrap';
 
 import "./header.css";
 import { Link } from 'react-router-dom';
-import { Col } from 'react-bootstrap';
 
 export default function Header() {
 
