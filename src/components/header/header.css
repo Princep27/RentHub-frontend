@@ -1,8 +1,5 @@
 .headerWrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     width: 100%;
     background-color: #D4E2D4;
     color: black; 
@@ -18,49 +15,8 @@
     align-items: center;
     width: 100%;
 }
-
-.headerLeft{
-    flex: 1;
-    display: flex;  
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.headerHamburger{
-    position: absolute;
-    left: 10px; 
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.title{
-    font-size: 24px;
-    letter-spacing: 2px;
-    cursor: pointer;    
-}
-
-.headerMid{
-    flex: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-}
-
-.headerMid input{
-    background-color: inherit;
-    padding: 0px 15px;
-    height: 28px;
-    font-size: 16px;  
-    color: gray(219, 219, 219);  
-    letter-spacing: 1px;
-}
-
-.header input:focus{
-    outline: none;
+.focusOutlineNone:focus{
+    border: none;
 }
 
 .header input::placeholder{
@@ -68,13 +24,6 @@
     letter-spacing: 3px;
     padding-left: 8px;
     color: rgb(160, 155, 155);
-}
-
-.headerSearch{
-    height: 37px;
-    width: 100%  ;
-    border-radius: 20px;
-    border: 2px solid grey;
 }
 
 .iconSearch{
