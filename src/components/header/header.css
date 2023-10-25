@@ -15,16 +15,7 @@
     align-items: center;
     width: 100%;
 }
-.focusOutlineNone:focus{
-    border: none;
-}
 
-.header input::placeholder{
-    font-size: 12px;
-    letter-spacing: 3px;
-    padding-left: 8px;
-    color: rgb(160, 155, 155);
-}
 
 .iconSearch{
     font-size: 24px; 
@@ -135,38 +126,9 @@ align-items: center;
 /*--------------media quries ----------------------------*/
 
 @media only screen and (max-width: 1024px){
-    .title{
-      padding-left: 30px;
-    }
-}
-
-@media only screen and (max-width: 1024px){
-    .title{
-      font-size: 20px;
-    }
-    .headerMid input{
-        height: 30px;
-        width: 100%;
-        margin-left: 10px;
-    } 
-    .iconSearch{
-        font-size: 24px; 
-        position: absolute;  
-        right: 10px;
-        cursor: pointer;
-    }   
-    .headerHamburger{
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 1024px){
     .subHeader ul li{
         padding: 0px 15px;
         font-size: 14px;
-    }
-    .headerHamburger{
-        left:6px;
     }
 }
 
@@ -175,32 +137,14 @@ align-items: center;
         padding: 0px 10px;
         font-size: 14px;
     }
-    .headerHamburger{
-        left:5px;
-        font-size: 17px;
-    }
     .loginIcon{
         font-size: 14px;
-    }
-    .headerMid input{
-        height: 25px;
-    }
-    .iconSearch{
-        font-size: 22px; 
-    } 
-    .header input::placeholder{
-        font-size: 10px;
-        letter-spacing: 1px;
-        padding-left: 2px;
     }
 }
 
 
 
 @media only screen and (max-width: 315px){
-    .headerLeft p{
-        font-size: 16px;
-      }
     .subHeader ul li{
         padding: 0px 10px;
         font-size: 12px;
@@ -214,12 +158,6 @@ align-items: center;
         margin-right: 10px;
         padding: 4px 5px;
     }
-    .headerMid input{
-        height: 22px;
-        width: 100%;
-        margin-left: 10px;
-        font-size: 14px;
-    } 
     .iconSearch{
         font-size: 22px; 
         position: absolute;  

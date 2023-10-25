@@ -40,7 +40,8 @@ export default function Header() {
               border:'2px solid gray', 
               borderRadius:'25px',
               width:'100%',
-              height:'32px'
+              height:'32px',
+              paddingRight:'35px'
             }}
             />
             <div
@@ -48,7 +49,7 @@ export default function Header() {
                 position:'absolute',
                 top:'0px',
                 right:'0px',
-                height:'32px'
+                height:'32px',
               }}
             >
               <CiSearch className='mt-1 me-2' style={{fontSize:'24px'}}/>
@@ -74,7 +75,8 @@ export default function Header() {
             border:'2px solid gray', 
             borderRadius:'25px',
             width:'100%',
-            height:'32px'
+            height:'32px',
+            paddingRight:'35px'
           }}
           />
           <div

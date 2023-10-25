@@ -1,3 +1,7 @@
+.removeBorder:focus-visible {
+  border:none;
+  outline:none;
+}
 .homeWrapper{
     margin-top: 20px;
     display: flex;
@@ -83,6 +87,7 @@
   padding: 4px 10px;
   outline: none;
   box-sizing: border-box;
+  padding-right:35px;
 }
 
 .filterStateInput::placeholder{
@@ -141,6 +146,7 @@
   padding: 4px 10px;
   outline: none;
   box-sizing: border-box;
+  padding-right:35px;
 }
 
 .filterCityInput::placeholder{
