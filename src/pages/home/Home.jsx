@@ -5,13 +5,11 @@ import Products from '../../components/products/Products';
 import Footer from '../../components/footer/Footer';
 import {BiFilter} from "react-icons/bi";
 import { State, City }  from 'country-state-city';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Button, Container, Dropdown, Modal } from 'react-bootstrap';
 
 
 export default function Home() {
-  const location = useLocation();
-
   // States and contexts
   const [isOpen,setIsOpen] = useState(false);
   const [filterState,setFilterState] = useState([]);
@@ -72,7 +70,7 @@ export default function Home() {
 
   return (
     <>
-        <div style={{opacity:isOpen || (location.pathname !== "/")?'0.5':'1'}}>
+        <div >
           <Header/>
           <div className='homeWrapper'>
             <div className='heading'>
