@@ -1,5 +1,5 @@
 import { Form, Modal,Button, Container } from 'react-bootstrap';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Login() {
     const navigate = useNavigate();
@@ -14,20 +14,30 @@ function Login() {
             <Container className='p-4'>
                 <Form centered>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>EMAIL</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label>PASSWORD</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Remember me" />
                     </Form.Group>
-                    <Button type="submit" style={{backgroundColor:'#0A3E33', border:'none'}}>
-                        Submit
-                    </Button>
+                    <div className="d-flex justify-content-center">
+                        <div className="d-flex gap-3">
+                            <Button type="submit" style={{backgroundColor:'#0A3E33', border:'none'}}>
+                                <Link to="/register" style={{color:"white", textDecoration:'none'}}>
+                                    NEW USER
+                                </Link>
+                            </Button>
+                            <Button type="submit" style={{backgroundColor:'#0A3E33', border:'none'}}>
+                                LOGIN
+                            </Button>
+                        </div>
+
+                    </div>
                 </Form>
             </Container>
         </div>
