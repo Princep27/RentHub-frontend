@@ -1,5 +1,5 @@
 import { Form, Modal,Button, Container } from 'react-bootstrap';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Form as RouterForm, useLocation, useNavigate } from 'react-router-dom';
 function Register() {
     const navigate = useNavigate();
     const location = useLocation();
@@ -10,7 +10,7 @@ function Register() {
                 <div className="h4">Create New Account</div>
             </Modal.Header>
             <Container className='p-4'>
-                <Form centered>
+                <RouterForm centered>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>NAME <span className="text-danger">*</span> </Form.Label>
                         <Form.Control type="text" placeholder="Enter your name" required/>
@@ -33,7 +33,7 @@ function Register() {
 
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <div className="d-flex">
-                            <Form.Check type="checkbox" label="Terms & conditions" /> 
+                            <Form.Check type="checkbox" label="Terms & conditions" required/> 
                             <span className="text-danger">&nbsp;*</span>
                         </div>
                     </Form.Group>
@@ -44,7 +44,7 @@ function Register() {
                             </Button>
                         </div>
                     </div>
-                </Form>
+                </RouterForm>
             </Container>
         </div>
       </Modal>
