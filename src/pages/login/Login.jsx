@@ -1,5 +1,5 @@
 import { Form, Modal,Button, Container } from 'react-bootstrap';
-import { Form as RouterForm,Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Login() {
     const navigate = useNavigate();
@@ -12,14 +12,14 @@ function Login() {
                 <div className="h4">Login</div>
             </Modal.Header>
             <Container className='p-4'>
-                <RouterForm centered>
+                <Form centered>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>EMAIL</Form.Label>
+                        <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>PASSWORD</Form.Label>
+                        <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -38,7 +38,7 @@ function Login() {
                         </div>
 
                     </div>
-                </RouterForm>
+                </Form>
             </Container>
         </div>
       </Modal>
