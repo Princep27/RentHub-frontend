@@ -4,7 +4,7 @@ function Register() {
     const navigate = useNavigate();
     const location = useLocation();
     return ( <>
-        <Modal show={location.pathname === "/register"} centered onHide={()=>{navigate("/")}} style={{ backgroundImage:'linear-gradient(to bottom right, #0A3E33,rgb(205, 210, 206))' }}>
+        <Modal show={location.pathname === "/register"} backdrop="static" centered onHide={()=>{navigate("/")}} style={{ backgroundImage:'linear-gradient(to bottom right, #0A3E33,rgb(205, 210, 206))' }}>
         <div style={{backgroundColor:'#B9C9BC'}}>
             <Modal.Header closeButton style={{borderBottom:''}}>
                 <div className="h4">Create New Account</div>
