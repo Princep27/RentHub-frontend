@@ -14,7 +14,7 @@ function DisplayCategory({category, setCategoryList}) {
             }}
             onClick={
                 ()=>{
-                    setCategoryList((curr)=>curr.filter((x)=>x != category))
+                    setCategoryList((curr)=>curr.filter((x)=>x !== category))
                 }
             }
         >
